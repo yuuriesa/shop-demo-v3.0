@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/yuri/Dev/ShopDemoV3.0/src/ShopDemoV3/ShopDemoV3.csproj": {}
+    "/home/yuri/Dev/shop-demo-v3.0/src/ShopDemoV3/ShopDemoV3.csproj": {}
   },
   "projects": {
-    "/home/yuri/Dev/ShopDemoV3.0/src/ShopDemoV3/ShopDemoV3.csproj": {
+    "/home/yuri/Dev/shop-demo-v3.0/src/ShopDemoV3/ShopDemoV3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/yuri/Dev/ShopDemoV3.0/src/ShopDemoV3/ShopDemoV3.csproj",
+        "projectUniqueName": "/home/yuri/Dev/shop-demo-v3.0/src/ShopDemoV3/ShopDemoV3.csproj",
         "projectName": "ShopDemoV3",
-        "projectPath": "/home/yuri/Dev/ShopDemoV3.0/src/ShopDemoV3/ShopDemoV3.csproj",
+        "projectPath": "/home/yuri/Dev/shop-demo-v3.0/src/ShopDemoV3/ShopDemoV3.csproj",
         "packagesPath": "/home/yuri/.nuget/packages/",
-        "outputPath": "/home/yuri/Dev/ShopDemoV3.0/src/ShopDemoV3/obj/",
+        "outputPath": "/home/yuri/Dev/shop-demo-v3.0/src/ShopDemoV3/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/yuri/.nuget/NuGet/NuGet.Config"
