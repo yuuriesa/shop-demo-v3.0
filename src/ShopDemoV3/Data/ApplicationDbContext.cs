@@ -14,5 +14,10 @@ namespace ShopDemoV3.Data
             var connetionString = "Server=localhost;Database=ShopDemoV3;User=SA;Password=Password123!;TrustServerCertificate=True;MultipleActiveResultSets=true";
             optionsBuilder.UseSqlServer(connectionString: connetionString);
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
