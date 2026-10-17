@@ -8,5 +8,11 @@ namespace ShopDemoV3.Data
         {
             
         }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            var connetionString = "Server=localhost;Database=ShopDemoV3;User=SA;Password=Password123!;TrustServerCertificate=True;MultipleActiveResultSets=true";
+            optionsBuilder.UseSqlServer(connectionString: connetionString);
+        }
     }
 }
