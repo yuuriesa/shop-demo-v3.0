@@ -92,5 +92,10 @@ namespace ShopDemoV3.Models
             }
             CustomerId = customerId;
         }
+
+        private void SetFirstName(string firstName)
+        {
+            _firstname = firstName;
+        }
     }
 }
