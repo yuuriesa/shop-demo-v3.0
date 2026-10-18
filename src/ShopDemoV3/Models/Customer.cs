@@ -102,5 +102,10 @@ namespace ShopDemoV3.Models
         {
             _lastName = lastName;
         }
+
+        private void SetEmailAddress(string emailAddress)
+        {
+            _emailAddress = emailAddress;
+        }
     }
 }
