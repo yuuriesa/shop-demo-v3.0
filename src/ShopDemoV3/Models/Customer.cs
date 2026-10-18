@@ -37,6 +37,23 @@ namespace ShopDemoV3.Models
             _lastname = lastName;
             _emailAddress = emailAddress;
             _dateOfBirth = dateOfBirth;
+
+            //Validate
+            // (
+
+            // );
+        }
+
+        //public methods
+        public static Customer RegisterNew
+        (
+            string firstName,
+            string lastName,
+            string emailAddress,
+            DateTime dateOfBirth
+        )
+        {
+            
         }
     }
 }
