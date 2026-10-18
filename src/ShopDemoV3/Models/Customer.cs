@@ -17,7 +17,20 @@ namespace ShopDemoV3.Models
         public DateOnly DateOfBirth => _dateOfBirth;
         public string ErrorMessageIfIsNotValid { get; private set; } = string.Empty;
     
+        //constructors    
         public Customer()
+        {
+            
+        }
+
+        private Customer
+        (
+            int customerId,
+            string firstName,
+            string lastName,
+            string emailAddress,
+            DateOnly dateOfBirth
+        )
         {
             
         }
