@@ -12,5 +12,6 @@ namespace ShopDemoV3.Utils
         public const string FirstNameIsRequired = "FirstName Is Required";
         public const string LastNameIsRequired = "LastName Is Required";
         public const string EmailAddressIsRequired = "EmailAddress Is Required";
+        public const string DateOfBirthIsRequired = "DateOfBirth Is Required";
     }
 }
