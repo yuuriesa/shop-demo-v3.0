@@ -15,5 +15,6 @@ namespace ShopDemoV3.Utils
         public const string DateOfBirthIsRequired = "DateOfBirth Is Required";
         public const string CustomerEmailExistsError = "this email exists";
         public const string DuplicateEmailError = "found duplicate emails";
+        public const string CustomerPaginationError = "The pagination parameters 'pageSize' and 'pageNumber' must be positive numbers. Check the values ​​provided.";
     }
 }
