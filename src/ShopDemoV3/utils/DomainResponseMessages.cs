@@ -5,6 +5,7 @@ namespace ShopDemoV3.Utils
         //Customers
         public const string CustomerCustomerIdMustBeGreaterThanZeroError = "CustomerId must be greater than zero";
         public const string CustomerNotFoundMessageError = "Customer not found";
-              public const string MaximumOf40CharactersError = "Must have a maximum of 40 characters";
+        public const string MaximumOf40CharactersError = "Must have a maximum of 40 characters";
+        public const string DateOfBirthError = "You cannot put the date with the day after today.";
     }
 }
