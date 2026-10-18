@@ -16,5 +16,10 @@ namespace ShopDemoV3.Models
         public string EmailAddress => _emailAddress;
         public DateOnly DateOfBirth => _dateOfBirth;
         public string ErrorMessageIfIsNotValid { get; private set; } = string.Empty;
+    
+        public Customer()
+        {
+            
+        }
     }
 }
