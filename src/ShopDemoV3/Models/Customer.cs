@@ -32,7 +32,11 @@ namespace ShopDemoV3.Models
             DateOnly dateOfBirth
         )
         {
-            
+            CustomerId = customerId;
+            _firstname = firstName;
+            _lastname = lastName;
+            _emailAddress = emailAddress;
+            _dateOfBirth = dateOfBirth;
         }
     }
 }
