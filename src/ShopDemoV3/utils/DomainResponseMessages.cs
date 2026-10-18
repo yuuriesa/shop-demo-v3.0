@@ -14,5 +14,6 @@ namespace ShopDemoV3.Utils
         public const string EmailAddressIsRequired = "EmailAddress Is Required";
         public const string DateOfBirthIsRequired = "DateOfBirth Is Required";
         public const string CustomerEmailExistsError = "this email exists";
+        public const string DuplicateEmailError = "found duplicate emails";
     }
 }
