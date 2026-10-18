@@ -10,5 +10,6 @@ namespace ShopDemoV3.Utils
         public const string CustomerFieldsAreInvalidError = "FirstName, Lastname or DateOfBirth fields are invalid, check the values available.";
         public const string EmailFieldIsNotAValid = "The Email field is not a valid e-mail address.";
         public const string FirstNameIsRequired = "FirstName Is Required";
+        public const string LastNameIsRequired = "LastName Is Required";
     }
 }
