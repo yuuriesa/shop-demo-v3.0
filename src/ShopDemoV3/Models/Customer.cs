@@ -81,5 +81,16 @@ namespace ShopDemoV3.Models
         {
             return _isValid;
         }
+
+        //private methods
+        private void SetCustomerId(int customerId)
+        {
+            if (customerId < 1)
+            {
+                _isValid = false;
+                ErrorMessageIfIsNotValid = "";
+            }
+            CustomerId = customerId;
+        }
     }
 }
