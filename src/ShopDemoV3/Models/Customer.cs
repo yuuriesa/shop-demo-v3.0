@@ -111,5 +111,27 @@ namespace ShopDemoV3.Models
         {
             _dateOfBirth = DateOnly.FromDateTime(dateTime: dateOfBirth);
         }
+
+        private void Validate(string firstName, string lastName, DateTime dateOfBirth)
+        {
+            if (firstName.Length > 40 || lastName.Length > 40)
+            {
+                _isValid = false;
+                ErrorMessageIfIsNotValid = "";
+            }
+
+            DateTime dateNow = DateTime.Now;
+
+            if (dateOfBirth.ToUniversalTime().Date > dateNow.Date)
+            {
+                _isValid = false;
+                ErrorMessageIfIsNotValid = "";
+            }
+            
+            if (ErrorMessageIfIsNotValid == string.Empty)
+            {
+                _isValid = true;
+            }
+        }
     }
 }
