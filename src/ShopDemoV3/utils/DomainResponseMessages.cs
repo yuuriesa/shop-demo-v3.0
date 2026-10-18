@@ -11,5 +11,6 @@ namespace ShopDemoV3.Utils
         public const string EmailFieldIsNotAValid = "The Email field is not a valid e-mail address.";
         public const string FirstNameIsRequired = "FirstName Is Required";
         public const string LastNameIsRequired = "LastName Is Required";
+        public const string EmailAddressIsRequired = "EmailAddress Is Required";
     }
 }
