@@ -76,5 +76,10 @@ namespace ShopDemoV3.Models
 
             return customer;
         }
+
+        public bool IsValid()
+        {
+            return _isValid;
+        }
     }
 }
