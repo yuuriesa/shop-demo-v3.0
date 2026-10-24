@@ -159,7 +159,7 @@ namespace ShopDemoV3.Models
             if (firstName.Length > 40 || lastName.Length > 40)
             {
                 _isValid = false;
-                ErrorMessageIfIsNotValid = "";
+                ErrorMessageIfIsNotValid = DomainResponseMessages.MaximumOf40CharactersError;
             }
 
             DateTime dateNow = DateTime.Now;
