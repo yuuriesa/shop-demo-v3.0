@@ -167,7 +167,7 @@ namespace ShopDemoV3.Models
             if (dateOfBirth.ToUniversalTime().Date > dateNow.Date)
             {
                 _isValid = false;
-                ErrorMessageIfIsNotValid = "";
+                ErrorMessageIfIsNotValid = DomainResponseMessages.DateOfBirthError;
             }
             
             if (ErrorMessageIfIsNotValid == string.Empty)
