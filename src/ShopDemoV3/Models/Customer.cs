@@ -1,3 +1,6 @@
+using ShopDemoV3.DTOs;
+using ShopDemoV3.Utils;
+
 namespace ShopDemoV3.Models
 {
     public class Customer
@@ -7,14 +10,16 @@ namespace ShopDemoV3.Models
         private string _lastName;
         private string _emailAddress;
         private DateOnly _dateOfBirth;
+        private ICollection<Address> _addresses = new List<Address>();
         private bool _isValid { get; set; } = false;
 
         //public properties
         public int CustomerId { get; private set; }
-        public string FirstName => _firstname;
-        public string LastName => _lastname;
+        public string FirstName => _firstName;
+        public string LastName => _lastName;
         public string EmailAddress => _emailAddress;
         public DateOnly DateOfBirth => _dateOfBirth;
+        public ICollection<Address> Addresses => _addresses;
         public string ErrorMessageIfIsNotValid { get; private set; } = string.Empty;
     
         //constructors    
@@ -29,19 +34,23 @@ namespace ShopDemoV3.Models
             string firstName,
             string lastName,
             string emailAddress,
-            DateOnly dateOfBirth
+            DateOnly dateOfBirth,
+            List<Address> addresses
         )
         {
             CustomerId = customerId;
-            _firstname = firstName;
-            _lastname = lastName;
+            _firstName = firstName;
+            _lastName = lastName;
             _emailAddress = emailAddress;
             _dateOfBirth = dateOfBirth;
+            _addresses = addresses;
 
-            //Validate
-            // (
-
-            // );
+            Validate
+            (
+                firstName: firstName,
+                lastName: lastName,
+                dateOfBirth: dateOfBirth.ToDateTime(TimeOnly.MinValue)
+            );
         }
 
         //public methods
@@ -50,10 +59,23 @@ namespace ShopDemoV3.Models
             string firstName,
             string lastName,
             string emailAddress,
-            DateTime dateOfBirth
+            DateTime dateOfBirth,
+            List<AddressRequestDTO> addresses
         )
         {
-            
+            Customer customer = new Customer();
+            customer.SetFirstName(firstName: firstName);
+            customer.SetLastName(lastName: lastName);
+            customer.SetEmailAddress(emailAddress: emailAddress);
+            customer.SetDateOfBirth(dateOfBirth: dateOfBirth);
+            customer.SetAddresses(addresses: addresses);
+            customer.Validate(
+                firstName: firstName,
+                lastName: lastName,
+                dateOfBirth: dateOfBirth
+            );
+
+            return customer;
         }
 
         public static Customer SetExistingInfo
@@ -62,7 +84,8 @@ namespace ShopDemoV3.Models
             string firstName,
             string lastName,
             string emailAddress,
-            DateOnly dateOfBirth
+            DateOnly dateOfBirth,
+            List<Address> addresses
         )
         {
             Customer customer = new Customer
@@ -71,7 +94,8 @@ namespace ShopDemoV3.Models
                 firstName: firstName,
                 lastName: lastName,
                 emailAddress: emailAddress,
-                dateOfBirth: dateOfBirth
+                dateOfBirth: dateOfBirth,
+                addresses: addresses
             );
 
             return customer;
@@ -88,7 +112,7 @@ namespace ShopDemoV3.Models
             if (customerId < 1)
             {
                 _isValid = false;
-                ErrorMessageIfIsNotValid = "";
+                ErrorMessageIfIsNotValid = DomainResponseMessages.CustomerCustomerIdMustBeGreaterThanZeroError;
             }
             CustomerId = customerId;
         }
@@ -112,12 +136,30 @@ namespace ShopDemoV3.Models
             _dateOfBirth = DateOnly.FromDateTime(dateTime: dateOfBirth);
         }
 
+        private void SetAddresses(List<AddressRequestDTO> addresses)
+        {
+            foreach (var address in addresses)
+            {
+                Addresses.Add(item: new Address
+                {
+                    ZipCode = address.ZipCode,
+                    Street = address.Street,
+                    Number = address.Number,
+                    Neighborhood = address.Neighborhood,
+                    AddressComplement = address.AddressComplement,
+                    City = address.City,
+                    State = address.State,
+                    Country = address.Country
+                });
+            }
+        }
+
         private void Validate(string firstName, string lastName, DateTime dateOfBirth)
         {
             if (firstName.Length > 40 || lastName.Length > 40)
             {
                 _isValid = false;
-                ErrorMessageIfIsNotValid = "";
+                ErrorMessageIfIsNotValid = DomainResponseMessages.MaximumOf40CharactersError;
             }
 
             DateTime dateNow = DateTime.Now;
@@ -125,9 +167,15 @@ namespace ShopDemoV3.Models
             if (dateOfBirth.ToUniversalTime().Date > dateNow.Date)
             {
                 _isValid = false;
-                ErrorMessageIfIsNotValid = "";
+                ErrorMessageIfIsNotValid = DomainResponseMessages.DateOfBirthError;
             }
             
+            if (Addresses.Count() == 0)
+            {
+                _isValid = false;
+                ErrorMessageIfIsNotValid = DomainResponseMessages.MustHaveAtLeastOneAddress;
+            }
+
             if (ErrorMessageIfIsNotValid == string.Empty)
             {
                 _isValid = true;
