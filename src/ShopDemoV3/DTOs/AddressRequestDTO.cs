@@ -11,5 +11,7 @@ namespace ShopDemoV3.DTOs
         [Required]
         [MaxLength(length:100, ErrorMessage = DomainResponseMessages.MaximumOf100CharactersError)]
         public string Street { get; set; }
+        [Required]
+        public int Number { get; set; }
     }
 }
