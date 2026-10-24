@@ -24,5 +24,9 @@ namespace ShopDemoV3.DTOs
         public string City { get; set; }
         [Required]
         [MaxLength(length:50, ErrorMessage = DomainResponseMessages.MaximumOf50CharactersError)]
+        public string State { get; set; }
+        [Required]
+        [MaxLength(length: 50, ErrorMessage = DomainResponseMessages.MaximumOf50CharactersError)]
+        public string Country { get; set; }
     }
 }
