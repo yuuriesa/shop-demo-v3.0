@@ -1,4 +1,5 @@
 using ShopDemoV3.DTOs;
+using ShopDemoV3.Utils;
 
 namespace ShopDemoV3.Models
 {
@@ -111,7 +112,7 @@ namespace ShopDemoV3.Models
             if (customerId < 1)
             {
                 _isValid = false;
-                ErrorMessageIfIsNotValid = "";
+                ErrorMessageIfIsNotValid = DomainResponseMessages.CustomerCustomerIdMustBeGreaterThanZeroError;
             }
             CustomerId = customerId;
         }
