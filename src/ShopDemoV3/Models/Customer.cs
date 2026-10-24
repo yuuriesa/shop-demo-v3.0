@@ -73,6 +73,8 @@ namespace ShopDemoV3.Models
                 lastName: lastName,
                 dateOfBirth: dateOfBirth
             );
+
+            return customer;
         }
 
         public static Customer SetExistingInfo
@@ -81,7 +83,8 @@ namespace ShopDemoV3.Models
             string firstName,
             string lastName,
             string emailAddress,
-            DateOnly dateOfBirth
+            DateOnly dateOfBirth,
+            List<Address> addresses
         )
         {
             Customer customer = new Customer
@@ -90,7 +93,8 @@ namespace ShopDemoV3.Models
                 firstName: firstName,
                 lastName: lastName,
                 emailAddress: emailAddress,
-                dateOfBirth: dateOfBirth
+                dateOfBirth: dateOfBirth,
+                addresses: addresses
             );
 
             return customer;
