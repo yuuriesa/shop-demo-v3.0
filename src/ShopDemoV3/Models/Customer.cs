@@ -126,6 +126,11 @@ namespace ShopDemoV3.Models
             _dateOfBirth = DateOnly.FromDateTime(dateTime: dateOfBirth);
         }
 
+        private void SetAddresses(List<AddressRequestDTO> addresses)
+        {
+            
+        }
+
         private void Validate(string firstName, string lastName, DateTime dateOfBirth)
         {
             if (firstName.Length > 40 || lastName.Length > 40)
