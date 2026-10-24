@@ -68,6 +68,11 @@ namespace ShopDemoV3.Models
             customer.SetEmailAddress(emailAddress: emailAddress);
             customer.SetDateOfBirth(dateOfBirth: dateOfBirth);
             customer.SetAddresses(addresses: addresses);
+            customer.Validate(
+                firstName: firstName,
+                lastName: lastName,
+                dateOfBirth: dateOfBirth
+            );
         }
 
         public static Customer SetExistingInfo
