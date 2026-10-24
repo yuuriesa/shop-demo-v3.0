@@ -67,7 +67,7 @@ namespace ShopDemoV3.Models
             customer.SetLastName(lastName: lastName);
             customer.SetEmailAddress(emailAddress: emailAddress);
             customer.SetDateOfBirth(dateOfBirth: dateOfBirth);
-            
+            customer.SetAddresses(addresses: addresses);
         }
 
         public static Customer SetExistingInfo
