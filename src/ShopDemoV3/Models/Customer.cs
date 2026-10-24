@@ -7,6 +7,7 @@ namespace ShopDemoV3.Models
         private string _lastName;
         private string _emailAddress;
         private DateOnly _dateOfBirth;
+        private ICollection<Address> addresses = new List<Address>();
         private bool _isValid { get; set; } = false;
 
         //public properties
