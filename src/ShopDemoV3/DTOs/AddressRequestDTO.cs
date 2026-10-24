@@ -13,5 +13,8 @@ namespace ShopDemoV3.DTOs
         public string Street { get; set; }
         [Required]
         public int Number { get; set; }
+        [Required]
+        [MaxLength(length:50, ErrorMessage = DomainResponseMessages.MaximumOf50CharactersError)]
+        public string Neighborhood {get; set; }
     }
 }
