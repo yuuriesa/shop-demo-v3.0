@@ -19,5 +19,7 @@ namespace ShopDemoV3.Utils
     
         //Address
         public const string MaximumOf20CharactersError = "Must have a maximum of 20 characters";
+        public const string MaximumOf100CharactersError = "Must have a maximum of 100 characters";
+
     }
 }
