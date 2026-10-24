@@ -128,7 +128,20 @@ namespace ShopDemoV3.Models
 
         private void SetAddresses(List<AddressRequestDTO> addresses)
         {
-            
+            foreach (var address in addresses)
+            {
+                Addresses.Add(item: new Address
+                {
+                    ZipCode = address.ZipCode,
+                    Street = address.Street,
+                    Number = address.Number,
+                    Neighborhood = address.Neighborhood,
+                    AddressComplement = address.AddressComplement,
+                    City = address.City,
+                    State = address.State,
+                    Country = address.Country
+                });
+            }
         }
 
         private void Validate(string firstName, string lastName, DateTime dateOfBirth)
