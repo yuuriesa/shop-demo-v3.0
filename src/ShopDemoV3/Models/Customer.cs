@@ -42,10 +42,12 @@ namespace ShopDemoV3.Models
             _dateOfBirth = dateOfBirth;
             _addresses = addresses;
 
-            //Validate
-            // (
-
-            // );
+            Validate
+            (
+                firstName: firstName,
+                lastName: lastName,
+                dateOfBirth: dateOfBirth.ToDateTime(TimeOnly.MinValue)
+            );
         }
 
         //public methods
