@@ -1,3 +1,5 @@
+using ShopDemoV3.DTOs;
+
 namespace ShopDemoV3.Models
 {
     public class Customer
@@ -56,7 +58,8 @@ namespace ShopDemoV3.Models
             string firstName,
             string lastName,
             string emailAddress,
-            DateTime dateOfBirth
+            DateTime dateOfBirth,
+            List<AddressRequestDTO> addresses
         )
         {
             
