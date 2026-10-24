@@ -62,6 +62,11 @@ namespace ShopDemoV3.Models
             List<AddressRequestDTO> addresses
         )
         {
+            Customer customer = new Customer();
+            customer.SetFirstName(firstName: firstName);
+            customer.SetLastName(lastName: lastName);
+            customer.SetEmailAddress(emailAddress: emailAddress);
+            customer.SetDateOfBirth(dateOfBirth: dateOfBirth);
             
         }
 
