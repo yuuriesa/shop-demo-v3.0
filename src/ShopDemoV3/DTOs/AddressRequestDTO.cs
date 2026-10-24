@@ -16,5 +16,8 @@ namespace ShopDemoV3.DTOs
         [Required]
         [MaxLength(length:50, ErrorMessage = DomainResponseMessages.MaximumOf50CharactersError)]
         public string Neighborhood {get; set; }
+        [Required]
+        [MaxLength(length: 100, ErrorMessage = DomainResponseMessages.MaximumOf100CharactersError)]
+        public string AddressComplement { get; set; }
     }
 }
