@@ -170,6 +170,12 @@ namespace ShopDemoV3.Models
                 ErrorMessageIfIsNotValid = DomainResponseMessages.DateOfBirthError;
             }
             
+            if (Addresses.Count() == 0)
+            {
+                _isValid = false;
+                ErrorMessageIfIsNotValid = DomainResponseMessages.MustHaveAtLeastOneAddress;
+            }
+
             if (ErrorMessageIfIsNotValid == string.Empty)
             {
                 _isValid = true;
