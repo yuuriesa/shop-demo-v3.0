@@ -36,7 +36,7 @@ namespace ShopDemoV3.Models
         {
             CustomerId = customerId;
             _firstName = firstName;
-            _lastname = lastName;
+            _lastName = lastName;
             _emailAddress = emailAddress;
             _dateOfBirth = dateOfBirth;
 
