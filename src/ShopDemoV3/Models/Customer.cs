@@ -13,7 +13,7 @@ namespace ShopDemoV3.Models
         //public properties
         public int CustomerId { get; private set; }
         public string FirstName => _firstName;
-        public string LastName => _lastname;
+        public string LastName => _lastName;
         public string EmailAddress => _emailAddress;
         public DateOnly DateOfBirth => _dateOfBirth;
         public string ErrorMessageIfIsNotValid { get; private set; } = string.Empty;
