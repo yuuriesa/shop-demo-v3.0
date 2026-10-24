@@ -16,5 +16,8 @@ namespace ShopDemoV3.Utils
         public const string CustomerEmailExistsError = "this email exists";
         public const string DuplicateEmailError = "found duplicate emails";
         public const string CustomerPaginationError = "The pagination parameters 'pageSize' and 'pageNumber' must be positive numbers. Check the values ​​provided.";
+    
+        //Address
+        public const string MaximumOf20CharactersError = "Must have a maximum of 20 characters";
     }
 }
