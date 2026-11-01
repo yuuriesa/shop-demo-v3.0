@@ -12,5 +12,7 @@ namespace ShopDemoV3.Models
         public string OrderNumber => _orderNumber;
         public DateTime OrderDate => _orderDate;
         public decimal TotalOrderValue => _totalOrderValue;
+        public int CustomerId { get; private set; }
+        
     }
 }
