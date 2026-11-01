@@ -5,5 +5,6 @@ namespace ShopDemoV3.Models
         //private properties
         private string _orderNumber { get; set; }
         private DateTime _orderDate { get; set; }
+        private decimal _totalOrderValue { get; set; }
     }
 }
