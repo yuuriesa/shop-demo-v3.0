@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using ShopDemoV3.Utils;
 
 namespace ShopDemoV3.Models
 {
@@ -97,7 +98,11 @@ namespace ShopDemoV3.Models
         //private methods
         private void SetOrderId(int orderId)
         {
-            
+            if (orderId <= 0)
+            {
+                //ErrorMessageIfIsNotValid = DomainResponseMessages.OrderIdMustBeGreaterThanZeroError;
+            }
+            OrderId = orderId;
         }
     }
 }
