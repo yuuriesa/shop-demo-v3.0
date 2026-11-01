@@ -70,5 +70,13 @@ namespace ShopDemoV3.Models
 
             return order;
         }
+
+        public static Order SetExistingInfo
+        (
+
+        )
+        {
+            
+        }
     }
 }
