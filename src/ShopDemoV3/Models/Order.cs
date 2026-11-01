@@ -114,5 +114,10 @@ namespace ShopDemoV3.Models
 
             _orderNumber = orderNumber;
         }
+
+        private void SetOrderDate(DateTime orderDate)
+        {
+            
+        }
     }
 }
