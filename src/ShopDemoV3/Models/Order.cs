@@ -39,7 +39,15 @@ namespace ShopDemoV3.Models
             //List<Item> items
         )
         {
-            
+            OrderId = orderId;
+            _orderNumber = orderNumber;
+            _orderDate = orderDate;
+            _totalOrderValue = totalOrderValue;
+            //_customerId = customerId;
+            CustomerId = customerId;
+            //Items = items;
+
+            //Validate();
         }
     }
 }
