@@ -143,5 +143,15 @@ namespace ShopDemoV3.Models
         //     IEnumerable<decimal> totalValue = from item in items select item.TotalValue;
         //     _totalOrderValue = totalValue.Sum();
         // }
+
+        // private void SetOrderItems(List<Item> items)
+        // {
+        //     if (items.Count == 0)
+        //     {
+        //         ErrorMessageIfIsNotValid = DomainResponseMessages.TheOrderMustHaveAtLeastOneItem;
+        //     }
+
+        //     Items = items;
+        // }
     }
 }
