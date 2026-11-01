@@ -17,6 +17,6 @@ namespace ShopDemoV3.Models
         public int CustomerId { get; private set; }
         [JsonIgnore]
         public Customer Customer { get; set; }
-        
+        //public ICollection<Item> Items { get; private set; } = new List<Item>();
     }
 }
