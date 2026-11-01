@@ -18,5 +18,9 @@ namespace ShopDemoV3.Models
         [JsonIgnore]
         public Customer Customer { get; set; }
         //public ICollection<Item> Items { get; private set; } = new List<Item>();
+    
+        //properties for validation
+        public bool IsValid { get; private set; } = false;
+        public string ErrorMessageIfIsNotValid { get; private set; } = string.Empty;
     }
 }
