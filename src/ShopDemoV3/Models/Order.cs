@@ -107,7 +107,12 @@ namespace ShopDemoV3.Models
 
         private void SetOrderNumber(string orderNumber)
         {
-            
+            if (orderNumber.Length < 1)
+            {
+                //ErrorMessageIfIsNotValid = DomainResponseMessages.OrderNumberMustBeGreaterThanZeroError;
+            }
+
+            _orderNumber = orderNumber;
         }
     }
 }
