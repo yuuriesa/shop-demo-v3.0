@@ -153,5 +153,11 @@ namespace ShopDemoV3.Models
 
         //     Items = items;
         // }
+
+        private void Validate()
+        {
+            DateTime dateNow = DateTime.UtcNow;
+            //IsValid = _orderNumber.Length > 1 && _orderDate.ToUniversalTime().Date <= dateNow.Date && _totalOrderValue > 0 && CustomerId > 0 && Items.Count > 0;
+        }
     }
 }
