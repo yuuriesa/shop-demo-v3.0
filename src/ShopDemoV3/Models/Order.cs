@@ -73,7 +73,12 @@ namespace ShopDemoV3.Models
 
         public static Order SetExistingInfo
         (
-
+            int orderId,
+            string orderNumber,
+            DateTime orderDate,
+            decimal totalOrderValue,
+            int customerId
+            //List<Item> items
         )
         {
             
