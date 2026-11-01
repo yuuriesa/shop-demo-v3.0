@@ -52,7 +52,12 @@ namespace ShopDemoV3.Models
 
         //public methods
         public static Order RegisterNew
-        ()
+        (
+            string orderNumber,
+            DateTime orderDate,
+            int customerId
+            //List<Item> items
+        )
         {
             
         }
