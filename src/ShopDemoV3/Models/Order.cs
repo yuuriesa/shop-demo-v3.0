@@ -93,5 +93,11 @@ namespace ShopDemoV3.Models
 
             return order;
         }
+
+        //private methods
+        private void SetOrderId(int orderId)
+        {
+            
+        }
     }
 }
