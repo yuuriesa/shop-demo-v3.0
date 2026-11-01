@@ -81,7 +81,17 @@ namespace ShopDemoV3.Models
             //List<Item> items
         )
         {
-            
+            Order order = new Order
+            (
+                orderId: orderId,
+                orderNumber: orderNumber,
+                orderDate: orderDate,
+                totalOrderValue: totalOrderValue,
+                customerId: customerId
+                //items: items
+            );
+
+            return order;
         }
     }
 }
