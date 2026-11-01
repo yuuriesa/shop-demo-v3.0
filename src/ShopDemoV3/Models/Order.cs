@@ -137,5 +137,11 @@ namespace ShopDemoV3.Models
             //_customerId = customerId;
             CustomerId = customerId;
         }
+
+        // private void SetTotalOrderValue(List<Item> items)
+        // {
+        //     IEnumerable<decimal> totalValue = from item in items select item.TotalValue;
+        //     _totalOrderValue = totalValue.Sum();
+        // }
     }
 }
