@@ -117,7 +117,14 @@ namespace ShopDemoV3.Models
 
         private void SetOrderDate(DateTime orderDate)
         {
-            
+                   DateTime dateNow = DateTime.UtcNow;
+
+            if (dateNow.ToUniversalTime().Date > dateNow.Date)
+            {
+                //ErrorMessageIfIsNotValid = DomainResponseMessages.DateOfOrderError;
+            }
+
+            _orderDate = orderDate;
         }
     }
 }
