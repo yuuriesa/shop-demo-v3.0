@@ -126,5 +126,10 @@ namespace ShopDemoV3.Models
 
             _orderDate = orderDate;
         }
+
+        private void SetOrderCustomerId(int customerId)
+        {
+            
+        }
     }
 }
