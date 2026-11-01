@@ -8,6 +8,7 @@ namespace ShopDemoV3.Models
         private decimal _totalOrderValue { get; set; }
 
         //public properties
-        public int OrderId { get; set; }
+        public int OrderId { get; private set; }
+        public string OrderNumber => _orderNumber;
     }
 }
