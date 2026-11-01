@@ -49,5 +49,12 @@ namespace ShopDemoV3.Models
 
             //Validate();
         }
+
+        //public methods
+        public static Order RegisterNew
+        ()
+        {
+            
+        }
     }
 }
