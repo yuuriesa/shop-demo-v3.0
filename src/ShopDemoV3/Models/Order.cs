@@ -22,5 +22,11 @@ namespace ShopDemoV3.Models
         //properties for validation
         public bool IsValid { get; private set; } = false;
         public string ErrorMessageIfIsNotValid { get; private set; } = string.Empty;
+    
+        //private Constuctors
+        private Order()
+        {
+            
+        }
     }
 }
