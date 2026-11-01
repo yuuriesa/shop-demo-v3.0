@@ -129,7 +129,13 @@ namespace ShopDemoV3.Models
 
         private void SetOrderCustomerId(int customerId)
         {
-            
+            if (customerId <= 0)
+            {
+                ErrorMessageIfIsNotValid = DomainResponseMessages.CustomerCustomerIdMustBeGreaterThanZeroError;
+            }
+
+            //_customerId = customerId;
+            CustomerId = customerId;
         }
     }
 }
