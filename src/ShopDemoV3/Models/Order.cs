@@ -59,7 +59,16 @@ namespace ShopDemoV3.Models
             //List<Item> items
         )
         {
-            
+            Order order = new Order();
+
+            // order.SetOrderNumber(orderNumber: orderNumber);
+            // order.SetOrderDate(orderDate: orderDate);
+            // order.SetOrderCustomerId(customerId: customerId);
+            // order.SetOrderItems(items: items);
+            // order.SetTotalOrderValue(items: items);
+            // order.Validate();
+
+            return order;
         }
     }
 }
