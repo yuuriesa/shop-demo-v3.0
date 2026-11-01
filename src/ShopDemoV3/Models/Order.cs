@@ -10,5 +10,6 @@ namespace ShopDemoV3.Models
         //public properties
         public int OrderId { get; private set; }
         public string OrderNumber => _orderNumber;
+        public DateTime OrderDate => _orderDate;
     }
 }
