@@ -104,5 +104,10 @@ namespace ShopDemoV3.Models
             }
             OrderId = orderId;
         }
+
+        private void SetOrderNumber(string orderNumber)
+        {
+            
+        }
     }
 }
