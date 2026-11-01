@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace ShopDemoV3.Models
 {
     public class Order
@@ -13,6 +15,8 @@ namespace ShopDemoV3.Models
         public DateTime OrderDate => _orderDate;
         public decimal TotalOrderValue => _totalOrderValue;
         public int CustomerId { get; private set; }
+        [JsonIgnore]
+        public Customer Customer { get; set; }
         
     }
 }
