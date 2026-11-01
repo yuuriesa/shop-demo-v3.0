@@ -20,6 +20,7 @@ namespace ShopDemoV3.Models
         public string EmailAddress => _emailAddress;
         public DateOnly DateOfBirth => _dateOfBirth;
         public ICollection<Address> Addresses => _addresses;
+        public ICollection<Order>
         public string ErrorMessageIfIsNotValid { get; private set; } = string.Empty;
     
         //constructors    
