@@ -28,5 +28,18 @@ namespace ShopDemoV3.Models
         {
             
         }
+
+        private Order
+        (
+            int orderId,
+            string orderNumber,
+            DateTime orderDate,
+            decimal totalOrderValue,
+            int customerId
+            //List<Item> items
+        )
+        {
+            
+        }
     }
 }
