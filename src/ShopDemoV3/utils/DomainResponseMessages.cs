@@ -25,7 +25,7 @@ namespace ShopDemoV3.Utils
     
         //Product
         public const string ProductIdMustBeGreaterThanZeroError = "ProductId must be greater than zero";
-    
+        public const string ProductNotFoundMessageError = "Product not found";
     
     }
 }
