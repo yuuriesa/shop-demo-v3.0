@@ -29,7 +29,7 @@ namespace ShopDemoV3.Utils
         public const string CodeIsRequired = "Code Is Required";
         public const string ProductCodeExistsError = "this Code exists";
         public const string ProductNameIsRequired = "ProductName Is Required";
-        
+        public const string DuplicateCodeError = "found duplicate Codes";
 
 
 
