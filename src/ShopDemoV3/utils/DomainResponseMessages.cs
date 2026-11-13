@@ -35,6 +35,7 @@ namespace ShopDemoV3.Utils
         //Order
         public const string OrderIdMustBeGreaterThanZeroError = "OrderId must be greater than zero";
         public const string OrderNumberMustBeGreaterThanZeroError = "OrderNumber must be greater than zero";
+        public const string OrderNumberIsRequired = "OrderNumber Is Required";
         
 
 
