@@ -38,7 +38,11 @@ namespace ShopDemoV3.Utils
         public const string OrderNumberIsRequired = "OrderNumber Is Required";
         public const string OrderNotFoundMessageError = "Order Not Found";
         public const string OrderNumberExistsError = "this OrderNumber exists";
+        public const string OrderNumberNotExistsError = "this OrderNumber not exists";
 
+
+
+        
 
 
 
