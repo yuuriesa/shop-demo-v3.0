@@ -39,10 +39,10 @@ namespace ShopDemoV3.Utils
         public const string OrderNotFoundMessageError = "Order Not Found";
         public const string OrderNumberExistsError = "this OrderNumber exists";
         public const string OrderNumberNotExistsError = "this OrderNumber not exists";
+        public const string DateOfOrderError = "You cannot put the date with the day after today.";
 
 
 
-        
 
 
 
