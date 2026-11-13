@@ -32,7 +32,15 @@ namespace ShopDemoV3.Utils
         public const string DuplicateCodeError = "found duplicate Codes";
         public const string ProductFieldsAreInvalidError = "Code or Name fields are invalid, check the values available.";
 
+        //Order
+        public const string OrderIdMustBeGreaterThanZeroError = "OrderId must be greater than zero";
 
+
+
+
+
+
+        
 
     }
 }
