@@ -41,7 +41,7 @@ namespace ShopDemoV3.Utils
         public const string OrderNumberNotExistsError = "this OrderNumber not exists";
         public const string DateOfOrderError = "You cannot put the date with the day after today.";
         public const string TheOrderMustHaveAtLeastOneItem = "The order must have at least one item";
-
+        public const string TheUnitValueMustBeGreaterThanZero = "The unit value must be greater than zero.";
 
 
 
